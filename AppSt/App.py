@@ -14,6 +14,7 @@ st.sidebar.header("season")
 selected_season = st.sidebar.selectbox(
     "Season",
     [
+        "2012/2013"
         "2013/2014",
         "2014/2015",
         "2015/2016",
