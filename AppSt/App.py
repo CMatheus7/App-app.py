@@ -14,7 +14,7 @@ selected_season = st.sidebar.selectbox("Season", ["2013/2014", "2014/2015", "201
 # Web scraping Footbal Data
 
 def load_data(Liga, season):
-  url = https://www.football-data.co.uk/mmz4281/"+season+"/"+liga+"/E0.csv"
+  url = "https://www.football-data.co.uk/mmz4281/"+season+"/"+liga+"/E0.csv"
   data = pd.read_csv(url)
   return data
 
