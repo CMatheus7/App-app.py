@@ -7,7 +7,7 @@ st.title("FOOTBALL DATA")
 
 st.sidebar.header("league")
 selected_league = st.sidebar.selectbox(
-    "league", ["Premier League", "La Liga", "Bundesliga", "Serie A", "Ligue 1"]
+    "league", ["England", "Germany", "Italy", "Spain", "France"]
 )
 
 st.sidebar.header("season")
