@@ -55,7 +55,7 @@ def load_data(league, season):
     season = '2425'
 
 
-  url = https://www.football-data.co.uk/mmz4281/"+season+"/"+liga+"/E0.csv"
+  url = https://www.football-data.co.uk/mmz4281/"+season+"/"+league+"/E0.csv"
   data = pd.read_csv(url)
   return data
 
