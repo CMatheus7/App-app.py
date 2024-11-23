@@ -29,22 +29,20 @@ selected_season = st.sidebar.selectbox(
     ],
 )
 
+
 # Web scraping Footbal Data
-
-
 def load_data(league, season):
 
     if selected_league == "England":
-        liga = "E0"
+        league = "E0"
     if selected_league == "Germany":
-        liga = "D1"
+        league = "D1"
     if selected_league == "Italy":
-        liga = "I1"
+        league = "I1"
     if selected_league == "Spain":
-        liga = "SP1"
+        league = "SP1"
     if selected_league == "France":
-        liga = "F1"
-
+        league = "F1"
 
     if selected_season == "2012/2013":
         season = "1213"
