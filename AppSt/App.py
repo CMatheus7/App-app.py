@@ -14,7 +14,6 @@ st.sidebar.header("season")
 selected_season = st.sidebar.selectbox(
     "Season",
     [
-        "2012/2013",
         "2013/2014",
         "2014/2015",
         "2015/2016",
@@ -35,16 +34,17 @@ selected_season = st.sidebar.selectbox(
 
 def load_data(league, season):
 
-    if league == "Premier League":
+    if selected_league == "England":
         liga = "E0"
-    if league == "La Liga":
-        liga = "SP1"
-    if league == "Bundesliga":
+    if selected_league == "Germany":
         liga = "D1"
-    if league == "Serie A":
+    if selected_league == "Italy":
         liga = "I1"
-    if league == "Ligue 1":
+    if selected_league == "Spain":
+        liga = "SP1"
+    if selected_league == "France":
         liga = "F1"
+
 
     if selected_season == "2012/2013":
         season = "1213"
@@ -74,6 +74,7 @@ def load_data(league, season):
         season = "2425"
 
     url = "https://www.football-data.co.uk/mmz4281/" + season + "/" + league + ".csv"
+
     data = pd.read_csv(url)
     return data
 
