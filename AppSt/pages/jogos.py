@@ -14,7 +14,7 @@ def load_data_jogos(dia):
     dia_str = dia.strftime("%d%m%Y")
     
     # Construir a URL para acessar o arquivo CSV raw no GitHub
-    url = f"https://raw.githubusercontent.com/CMatheus7/Jogos_do_Dia_FlashScore/main/Jogos_Do_Dia_FlashScore/jogos_{dia_str}.csv"
+    url = f"https://raw.githubusercontent.com/CMatheus7/Jogos_do_Dia_FlashScore/main/jogos_{dia_str}.csv"
     
     try:
         # Carregar o CSV diretamente
