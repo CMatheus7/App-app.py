@@ -25,6 +25,7 @@ def load_data_jogos():
 
 # Tentar carregar os dados e exibir o DataFrame
 try:
-    df_jogos = load_data_jogos()
-st.dataframe(df_jogos)
-
+    df_jogos = load_data_jogos()  # Tenta carregar o CSV
+    st.dataframe(df_jogos)  # Exibe os dados na interface do Streamlit
+except Exception as e:  # Captura qualquer exceção
+    st.error(f"Erro ao carregar os dados: {e}")  # Exibe mensagem de erro
