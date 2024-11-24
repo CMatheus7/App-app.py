@@ -1,7 +1,5 @@
 import streamlit as st
 import pandas as pd
-import numpy as np
-import datetime
 from datetime import date
 
 # Título do aplicativo Streamlit
@@ -19,6 +17,7 @@ def load_data_jogos(dia):
     url = f"https://raw.githubusercontent.com/CMatheus7/Jogos_do_Dia_FlashScore/main/Jogos_Do_Dia_FlashScore/jogos_{dia_str}.csv"
     
     try:
+        # Carregar o CSV diretamente
         data_jogos = pd.read_csv(url)
         return data_jogos
     except Exception as e:
@@ -28,7 +27,7 @@ def load_data_jogos(dia):
 # Carregar os dados dos jogos para a data selecionada
 df_jogos = load_data_jogos(dia)
 
-
+# Exibir os dados no Streamlit, se existirem
 if not df_jogos.empty:
     st.dataframe(df_jogos)
 else:
