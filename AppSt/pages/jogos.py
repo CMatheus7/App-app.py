@@ -26,4 +26,5 @@ def load_data_jogos():
 # Tentar carregar os dados e exibir o DataFrame
 try:
     df_jogos = load_data_jogos()
-    st.dataframe(df_jogos)
+st.dataframe(df_jogos)
+
