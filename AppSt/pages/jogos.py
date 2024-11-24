@@ -13,7 +13,7 @@ dia = st.date_input("Data de analise", date.today())
 
 def load_data_jogos():
     data_jogos = pd.read_csv(
-        "https://github.com/CMatheus7/Jogos_do_Dia_FlashScore/blob/main/jogos_do_dia"
+        "https://github.com/CMatheus7/Jogos_do_Dia_FlashScore/blob/main/jogos_"
         + str(dia)
         + ".csv?raw=true"
     )
