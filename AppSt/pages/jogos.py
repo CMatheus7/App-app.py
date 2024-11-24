@@ -26,4 +26,4 @@ def load_data_jogos():
 
 try:
     df_jogos = load_data_jogos()  
-    st.dataframe(df_jogos)  
+    st.dataframe(df_jogos)
