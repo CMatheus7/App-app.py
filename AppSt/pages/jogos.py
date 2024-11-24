@@ -4,23 +4,19 @@ import numpy as np
 import datetime
 from datetime import date
 
-
+# Título do aplicativo Streamlit
 st.title("Jogos do dia")
 
 
-dia = st.date_input("Data de análise", date.today())
+dia = st.date_input("Data de analise", date.today())
 
 
 def load_data_jogos():
-    # Formatar a data para o formato ddmmyyyy
-    dia_formatado = dia.strftime('%d%m%Y')
-    
-  
-    url = f"https://raw.githubusercontent.com/CMatheus7/Jogos_do_Dia_FlashScore/main/base_excel/jogos_{dia_formatado}.csv"
-    
-  
-    data_jogos = pd.read_csv(url)
-    
+    data_jogos = pd.read_csv(
+        "https://github.com/CMatheus7/Jogos_do_Dia_FlashScore/blob/main/jogos_"
+        + str(dia)
+        + ".csv?raw=true"
+    )
     return data_jogos
 
 
