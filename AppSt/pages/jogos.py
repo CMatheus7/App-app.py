@@ -24,6 +24,6 @@ def load_data_jogos():
     return data_jogos
 
 
-try:
-    df_jogos = load_data_jogos()  
-    st.dataframe(df_jogos)
+df_jogos = load_data_jogos()
+
+st.dataframe(df_jogos)
