@@ -9,6 +9,5 @@ st.title("Jogos do dia")
 
 
 dia = st.date_input(
-  "Data de analise.
+  "Data de analise"
     date.today())
-
