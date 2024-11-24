@@ -27,5 +27,3 @@ def load_data_jogos():
 try:
     df_jogos = load_data_jogos()  # Tenta carregar o CSV
     st.dataframe(df_jogos)  # Exibe os dados na interface do Streamlit
-except Exception as e:  # Captura qualquer exceção
-    st.error(f"Erro ao carregar os dados: {e}")  # Exibe mensagem de erro
