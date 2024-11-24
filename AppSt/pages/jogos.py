@@ -8,4 +8,6 @@ from datetime import date
 st.title("Jogos do dia")
 
 
-dia = st.date_input("Data de analise", date.today())
+dia = st.date_input(
+  "Data de analise", 
+    date.today())
