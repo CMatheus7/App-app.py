@@ -28,7 +28,7 @@ def load_data_jogos(dia):
 # Carregar os dados dos jogos para a data selecionada
 df_jogos = load_data_jogos(dia)
 
-# Exibir os dados no Streamlit, se existirem
+
 if not df_jogos.empty:
     st.dataframe(df_jogos)
 else:
