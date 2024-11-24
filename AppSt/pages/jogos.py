@@ -8,6 +8,18 @@ from datetime import date
 st.title("Jogos do dia")
 
 
-dia = st.date_input(
-  "Data de analise", 
-    date.today())
+dia = st.date_input("Data de analise", date.today())
+
+
+def load_data_jogos():
+    data_jogos = pd.read_csv(
+        "https://github.com/CMatheus7/Jogos_do_Dia_FlashScore/blob/main/Jogos_Do_Dia_FlashScore_"
+        + str(dia)
+        + ".xlsx"
+    )
+    return data_jogos
+
+
+df_jogos = load_data_jogos()
+
+st.dataframe(df_jogos)
